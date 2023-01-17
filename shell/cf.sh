@@ -227,7 +227,7 @@ do
 	do
 		rm -rf rtt rtt.txt log.txt speed.txt
 		mkdir rtt
-		echo "正在生成 $ips"
+		echo "is generating $ips"
 		unset temp
 		if [ "$ips" == "ipv4" ]
 		then
