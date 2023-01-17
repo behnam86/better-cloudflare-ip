@@ -71,7 +71,7 @@ echo "Measured bandwidth $realbandwidth Mbps"
 echo "peak speed $max kB/s"
 echo "round trip delay $avgms millisecond"
 echo "data center $colo"
-echo "total time $[$endtime-$starttime] 秒"
+echo "total time $[$endtime-$starttime] seconds"
 }
 
 function rtthttps(){
