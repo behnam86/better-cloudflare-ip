@@ -1,82 +1,82 @@
 # better-cloudflare-ip
 
-查找适合自己当前网络环境的优选Cloudflare Anycast IP
+Find the preferred Cloudflare Anycast IP for your current network environment
 
-旧版本即将停止服务，后续版本如果没有明显BUG也不再更新!
+The old version will be out of service soon, and subsequent versions will not be updated if there are no obvious bugs!
 
-## 使用申明
+## Declaration of use
 
-本项目侧重于研究任播技术中丢包率与网速的相互关系，仅供学习使用
+This project focuses on the study of the relationship between packet loss rate and network speed in anycast technology, for learning purposes only
 
-禁止使用范围准则如下
+The prohibited scope guidelines are as follows
 
-a) 相关机构提示网页有威胁的，有非法信息提示的网站。
+a) Relevant agencies warn that the web pages are threatening, and websites with illegal information prompts.
 
-b)医院类型网站（流产，皮肤病，性病等医院），未获得卫生部资质的网站。
+b) Hospital-type websites (hospitals for abortion, skin diseases, venereal diseases, etc.), websites that have not obtained the qualification of the Ministry of Health.
 
-c)网站主体内容含有色情（视频交友，一夜情交友）、违法（办假证，贩卖仿真枪）、封建迷信、游戏私服、游戏外挂、网赚、两性、美女贴图和动漫贴图（尺度过大）、赌博（含贩卖赌博工具。）、博彩等内容。
+c) The main content of the website contains pornography (video dating, one-night stand dating), illegality (false certificates, selling imitation guns), feudal superstition, private game servers, game cheats, online earning, gender, beauty stickers and animation stickers (too large) , Gambling (including selling gambling tools.), Gambling and other content.
 
-d)网站存在恶意流氓广告（存在非法内容视频链接，非法网页内容链接）。
+d) There are malicious rogue advertisements on the website (there are links to illegal content videos and illegal web page content links).
 
-e)网站存在任何破坏或试图破坏网络安全的行为，以病毒、木马、恶意代码、钓鱼等方式，试图对网站、网络相关软硬件进行恶意扫描、非法侵入系统、非法获取数据等内容。
+e) The website has any acts of destroying or attempting to destroy network security, such as viruses, Trojan horses, malicious codes, phishing, etc., attempting to maliciously scan the website, network-related software and hardware, illegally intrude into the system, and obtain data illegally.
 
-f)网站内容存在版权风险的网站（视频，小说，音乐等网站）。
+f) Websites with copyright risks in their website content (video, novel, music and other websites).
 
-g)网站含有药品销售、保健品销售，但未取得资质的，或严重夸大药效事实。
+g) The website contains sales of medicines and health care products, but has not obtained qualifications, or seriously exaggerates the facts of drug efficacy.
 
-h)网站主要业务为向非法网站提供支付、交易平台、担保，代理外国金融理财（炒股，炒现货，炒黄金）等服务的网站。
+h) The main business of the website is to provide illegal websites with services such as payment, trading platforms, guarantees, and acting as an agent for foreign financial management (stock trading, spot trading, and gold speculation).
 
-i)网站中大量存在影响社会和谐稳定的内容的网站（涉嫌攻击国家，攻击领导人，攻击人民，言论煽动性质网站）。
+i) There are a large number of websites with content that affects social harmony and stability (suspicious of attacking the country, attacking leaders, attacking the people, websites with inciting speech).
 
-j)网站内容含有国家相关法律法规不允许的其他内容。
+j) The content of the website contains other content that is not permitted by relevant national laws and regulations.
 
-k)网站内容含有VPN，网络代理等内容。
+k) The content of the website contains VPN, network proxy and other content.
 
-l) 通过技术手段或非技术手段干扰Cloudflare所有产品正常运营的网站。
+l) Websites that interfere with the normal operation of all Cloudflare products through technical or non-technical means.
 
-m)网站内容为发布虚假不实消息行为，或侵害了他人的合法权益行为的网站。
+m) The content of the website is a website that publishes false and untrue news, or violates the legitimate rights and interests of others.
 
-n) 获取网站内容需要通过登录等方式，无法直接查看造成内容无法审核的网站。
+n) Obtaining the content of the website requires login and other methods, and it is impossible to directly view the website that causes the content to be unaudited.
 
-o) 提供影视、软件和应用等下载服务的网站。
+o) Websites that provide download services for movies, software and applications.
 
 
-## 用户数据安全声明
+## User Data Security Statement
 
-此版本不需要用户上传任何数据到服务器，服务器仅提供IP地址池维护以及下发！
+This version does not require users to upload any data to the server, the server only provides IP address pool maintenance and distribution!
 
-## 用户自定义数据
+## User defined data
 
-用户可自定义ips-v4.txt和ips-v6.txt的IP地址段，如果使用数据更新将会覆盖本地自定义的数据
+Users can customize the IP address segment of ips-v4.txt and ips-v6.txt, if using data update will overwrite the local custom data
 
-自定义ips-v4.txt的内容格式为 x.x.x.x或者x.x.x.x/x的CIDR写法，默认提取.前三位
+The content format of the custom ips-v4.txt is x.x.x.x or x.x.x.x/x CIDR notation, which is extracted by default. The first three digits
 
-自定义ips-v6.txt的内容格式为 x:x:x:x:x:x:x:x或者x:x:x:x:x:x:x:x/x的CIDR写法，默认提取:前三位
+The content format of the custom ips-v6.txt is x:x:x:x:x:x:x:x or x:x:x:x:x:x:x:x/x, which is extracted by default : the first three digits
 
-更多自定义玩法待用户自己发现
+More custom gameplay is waiting for users to discover by themselves
 
-## Windows批处理版本
+## Windows batch version
 
-请下载Release版本使用,不要使用Git Clone下载(会出现乱码)
+Please download the Release version to use, do not use Git Clone to download (garbled characters will appear)
 
-Windows 7用户推荐使用ANSI编码版本
+Windows 7 users recommend using the ANSI encoded version
 
-Windows 8及以上版本用户推荐使用UTF-8编码版本
+Users of Windows 8 and above versions are recommended to use the UTF-8 encoded version
 
-注:ANSI编码版本可以Windows全平台通用，部分Windows系统的BUG会导致控制台输出乱码
+Note: The ANSI encoding version can be used on all Windows platforms, and the BUG of some Windows systems will cause the console to output garbled characters
 
-点击下载[Windows版本](https://github.com/badafans/better-cloudflare-ip/releases/latest/download/batch.zip)
+Click to download [Windows version] (https://github.com/badafans/better-cloudflare-ip/releases/latest/download/batch.zip)
 
-## Linux版本
+## Linux version
 
-完整复制下方链接粘贴到控制台并回车，后续运行只需输入./cf.sh并回车即可
+Completely copy and paste the link below to the console and press Enter. For subsequent operations, just enter ./cf.sh and press Enter.
 
-目前已经测试 Termux、OpenWrt、Ubuntu、Debian、CentOS、MacOS、Raspbian、Armbian、iSH
+Currently tested Termux, OpenWrt, Ubuntu, Debian, CentOS, MacOS, Raspbian, Armbian, iSH
 
 ``` bash
 curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o cf.sh && chmod +x cf.sh && ./cf.sh
 ```
 
-## 引用声明
+## quote declaration
 
-对于 Cloudflare ASN https://bgp.he.net/AS13335 ，Cloudflare IP Ranges 来自 https://www.cloudflare.com/zh-cn/ips/
+For Cloudflare ASN https://bgp.he.net/AS13335 , Cloudflare IP Ranges from https://www.cloudflare.com/zh-cn/ips/
