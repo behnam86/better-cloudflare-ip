@@ -74,7 +74,7 @@ Completely copy and paste the link below to the console and press Enter. For sub
 Currently tested Termux, OpenWrt, Ubuntu, Debian, CentOS, MacOS, Raspbian, Armbian, iSH
 
 ``` bash
-curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o cf.sh && chmod +x cf.sh && ./cf.sh
+curl https://raw.githubusercontent.com/behnam86/better-cloudflare-ip/master/shell/cf.sh -o cf.sh && chmod +x cf.sh && ./cf.sh
 ```
 
 ## quote declaration
